@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f8ff;
+            background-color:rgb(245, 217, 185);
             flex-direction: column;
         }
 
@@ -113,7 +113,7 @@
             </div>
 
             <div class="right">
-                <img src="https://via.placeholder.com/200" alt="Profile Image">
+                <img src="https://cdn.pixabay.com/photo/2018/02/17/19/25/person-3160685_1280.png" alt="Profile Image">
                 <div class="button-container">
                     <a href="{{ route('login') }}">
                         <button>Login</button>
