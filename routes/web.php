@@ -10,10 +10,12 @@ Route::get('/siswa', function () {
 })->middleware(['auth', 'verified','role:siswa'])
  ->name('siswa');
 
+// Route::get('/', function () {
+//     return view('welcome2');
+// })->middleware(['auth','verified','role:siswa'])->name('home');
 Route::get('/', function () {
-    return view('w');
-})->middleware(['auth','verified','role:siswa'])->name('home');
-
+    return view('welcome2'); // Halaman awal dengan tombol login
+})->name('home');
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified','role:siswa','check_user_email'])
 //     ->name('dashboard');
