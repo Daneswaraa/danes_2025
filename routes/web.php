@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified','role:siswa','check_user_email'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::get('/industri', App\Livewire\Front\Industri\Index::class)->name('industri');
+    Route::get('/laporan', App\Livewire\Front\PKL\Index::class)->name('laporan');
+    Route::get('/guru', App\Livewire\Front\Guru\Index::class)->name('guru');
 });
 
 Route::middleware(['auth'])->group(function () {
