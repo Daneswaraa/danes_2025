@@ -4,7 +4,9 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
-
+use App\Livewire\Front\Industri\Index as IndustriIndex;
+use App\Livewire\Front\Pkl\Index as PklIndex;
+use App\Livewire\Front\Guru\Index as GuruIndex;
 Route::get('/siswa', function () {
     return "Siswa";
 })->middleware(['auth', 'verified','role:siswa'])
@@ -23,7 +25,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified','role:siswa','check_user_email'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::get('/industri', App\Livewire\Front\Industri\Index::class)->name('industri');
-    Route::get('/laporan', App\Livewire\Front\PKL\Index::class)->name('laporan');
+    Route::get('/laporan', App\Livewire\Front\Pkl\Index::class)->name('laporan');
     Route::get('/guru', App\Livewire\Front\Guru\Index::class)->name('guru');
 });
 
